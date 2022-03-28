@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>УСП MQ Tivoli report</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h2 align="center" style="color:Black">УСП покрытие агентами Tivoli MQ</h2>
+<p><a href="./export" style="float: right;">Экспорт в CSV</a></p>
+<br>
+<br>
+<br>
+<table cellspacing="1" border="1" cellpadding="1" width="100%">
+    <tr>
+        <th>Сервер</th>
+        <th>MQ версия</th>
+        <th>MQ менеджер</th>
+        <th>MQ статус</th>
+        <th>Tivoli версия</th>
+        <th>Tivoli статус</th>
+        <th>Дата</th>
+        <th>Стенд</th>
+    </tr>
+
+    {{#usp_mq_data_list}}
+        <tr>
+            <td>{{host}}</td>
+            <td>{{mqVersion}}</td>
+            <td>{{mqName}}</td>
+            <td>{{mqStatus}}</td>
+            <td>{{tivoliVersion}}</td>
+            <td>{{tivoliStatus}}</td>
+            <td>{{dateCapture}}</td>
+            <td>{{stand}}</td>
+
+        </tr>
+    {{/usp_mq_data_list}}
+</table>
+</body>
+</html>

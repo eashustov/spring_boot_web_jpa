@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>MQ Tivoli report</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h2 align="center" style="color:Black">Покрытие агентами Tivoli MQ</h2>
+<p><a href="./export" style="float: right;">Экспорт в CSV</a></p>
+<br>
+<br>
+<br>
+<table cellspacing="1" border="1" cellpadding="1" width="100%">
+    <tr>
+    <th>ID</th>
+    <th>Server Name</th>
+    <th>MQ Name</th>
+    <th>Tivoli Status</th>
+</tr>
+
+    {{#mq_tivoli_list}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{serverName}}</td>
+            <td>{{mqName}}</td>
+            <td>{{tivoliInstall}}</td>
+
+        </tr>
+    {{/mq_tivoli_list}}
+</table>
+</body>
+</html>
