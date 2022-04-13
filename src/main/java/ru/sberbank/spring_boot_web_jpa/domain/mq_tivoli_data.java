@@ -1,22 +1,23 @@
 package ru.sberbank.spring_boot_web_jpa.domain;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "TESTMQTIVOLI")
 public class mq_tivoli_data {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
+    @Column(name = "SERVERNAME")
     private String serverName;
+    @Column(name = "MQNAME")
     private String mqName;
     private String tivoliInstall;
 
-    public mq_tivoli_data(String serverName, String mqName, String tivoliInstall) {
+    public mq_tivoli_data(String serverName, String mqName, String tivoliInstall, String test) {
         this.serverName = serverName;
         this.mqName = mqName;
         this.tivoliInstall = tivoliInstall;
+
     }
 
     public mq_tivoli_data() {
